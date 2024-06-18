@@ -1,0 +1,77 @@
+body {
+  overflow-x: hidden;
+  text-transform: uppercase;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.me-2 {
+  border-radius: 0px !important;
+}
+
+.form-check {
+  text-transform: lowercase;
+}
+
+.form-check-input {
+  border-radius: 0px !important;
+}
+
+.filtration-button {
+    border-radius: 0px !important;
+}
+
+.sort {
+  padding-left: 10px;
+  width: 95px;
+}
+
+.card {
+  border-radius: 0px !important;
+}
+
+.card-title {
+  color: #55595c;
+} 
+
+span {
+  color: #000;
+}
+
+button {
+  text-transform: uppercase;
+  border-radius: 0px !important;
+}
+
+.details-button {
+    border-width: 1px;
+    background: #0a1548;
+    color: #fff;
+}
+
+.buy-button {
+    background: var(--bs-card-cap-bg);
+    color: #55595c;
+    border-width: 1px;
+    border-color: var(--bs-btn-hover-bg);
+    margin-left: 10px;
+}
+
+.care-text {
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 17px;
+  margin-bottom: -1px;
+  text-transform: capitalize;
+}
+
+footer {
+  background: #0a1548;
+}
+
+.logo-text {
+  font-style: italic;
+  font-weight: bold;
+  color: #fff;
+}
