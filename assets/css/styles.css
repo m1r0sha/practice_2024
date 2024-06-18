@@ -2,16 +2,47 @@ body {
   overflow-x: hidden;
 }
 
-
-#footerpad {
-  padding-top: 70px;
-  padding-bottom: 20px;
-  background-color: #000000;
+.sort {
+  padding-left: 10px;
+  width: 95px;
 }
 
-a:focus, a:hover {
-  color: #0085A1;
+.card-title {
+  color: #55595c;
+} 
+
+span {
+  color: #000;
 }
 
+.details-button {
+    border-width: 1px;
+    background: #0a1548;
+}
 
+.buy-button {
+    background: var(--bs-card-cap-bg);
+    color: #55595c;
+    border-width: 1px;
+    border-color: var(--bs-btn-hover-bg);
+    margin-left: 10px;
+}
 
+.care-text {
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 17px;
+  margin-bottom: -1px;
+}
+
+footer {
+  background: #0a1548;
+}
+
+.logo-text {
+  font-style: italic;
+  font-weight: bold;
+  color: #fff;
+}
