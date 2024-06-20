@@ -13,9 +13,17 @@ class Numbers
   end
 
   def favourite_number
-      puts "Please enter your favourite number"
-      @numbers = gets.chomp.to_i
-      puts "Maybe this number will be your favourite #{@numbers + 1}?"
+    puts "Please enter your favourite number"
+    loop do
+      @numbers = gets.chomp
+      if @numbers.match?(/^-?\d+(\.\d+)?$/)
+        @numbers = @numbers.to_i
+        puts "Maybe this number will be your favourite #{@numbers + 1}?"
+        break
+      else
+        puts "Please enter NUMBER!"
+      end
+    end
   end
 end
 
