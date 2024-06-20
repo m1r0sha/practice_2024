@@ -3,34 +3,45 @@
 
 #!/usr/bin/env ruby
 
-def hashes_sort(number, word)
+def word_func()
+  puts "Enter number"
+  number = gets.chomp.to_i
+  puts "Enter word"
+  word = gets.chomp
+
   case word
   when "канал"
     return case number % 10
-           when 1, 2, 3, 4
-             number == 1 ? "#{number} #{word}" : "#{number} #{word}а"
+           when 1
+             puts "#{number} #{word}" 
+           when 2, 3, 4
+             puts "#{number} #{word}ы"
            else
-             "#{number} #{word}ов"
+             puts "#{number} #{word}ов"
            end
   when "камера"
     return case number % 10
            when 1
-             "#{number} #{word}а"
+             puts "#{number} #{word}а"
            when 2, 3, 4
-             "#{number} #{word}ы"
+             puts "#{number} #{word}ы"
            else
-             "#{number} #{word}"
+             puts "#{number} #{word}"
            end
   when "рубль"
     return case number % 10
            when 1
-             "#{number} #{word}"
+             puts "#{number} #{word}"
            when 2, 3, 4
-             "#{number} #{word}я"
+             puts "#{number} #{word}я"
            else
-             "#{number} #{word}ей"
+             puts "#{number} #{word}ей"
            end
   else
-    return "Неизвестное слово"
+    puts "Неизвестное слово"
   end
+end
+
+if __FILE__ == $0
+  word_func
 end
