@@ -3,7 +3,7 @@
 # [Александров, Иванов, Дилер Бодрый, Дилер Петров]. Программа должна работать для любой размерности массива. Все имена вводятся на русском языке
 
 #!/usr/bin/env ruby
-
+# test
 class Names
   def sort_names(names)
     regular_names = names.select { |name| !name.include?("Дилер") }
