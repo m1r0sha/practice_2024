@@ -6,8 +6,8 @@
 
 class Names
   def sort_names(names)
-    regular_names = names.select { |name| !name.start_with?("Дилер ") }
-    dealer_names = names.select { |name| name.start_with?("Дилер ") }
+    regular_names = names.select { |name| !name.include?("Дилер") }
+    dealer_names = names.select { |name| name.include?("Дилер") }
     sorted_regular_names = regular_names.sort
     sorted_dealer_names = dealer_names.sort
     sorted_names = sorted_regular_names + sorted_dealer_names
