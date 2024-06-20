@@ -1,28 +1,36 @@
 # задание 3
-# А вот задание потруднее: Если я прожил 943 миллиона секунд, то каков мой
-# возраст? (Без учета висакосных годов) Добавить возможность задавать количество секунд.
+#Нужно написать функцию.в качестве аргументов передаются число и  слово "канал", нужно просклонять  его в зависимости от числа стоящего перед ним и вернуть строку, например : 1 канал, 2 канала, 7 каналов. Для усложнения  можно добавить случаи для слов "камера" и "рубль".
 
 #!/usr/bin/env ruby
 
-class Age
-  attr_accessor :age_in_seconds
-
-  def initialize(age_in_seconds = 943000000)
-    @age_in_seconds = age_in_seconds
-  end
-
-  def age_timer
-      puts "Please enter the number of seconds of your life"
-      @age_in_seconds = gets.chomp.to_i
-      age_in_years = @age_in_seconds / (365.25 * 24 * 60 * 60) 
-      puts "Your age is #{age_in_years.round} years"
+def hashes_sort(number, word)
+  case word
+  when "канал"
+    return case number % 10
+           when 1, 2, 3, 4
+             number == 1 ? "#{number} #{word}" : "#{number} #{word}а"
+           else
+             "#{number} #{word}ов"
+           end
+  when "камера"
+    return case number % 10
+           when 1
+             "#{number} #{word}а"
+           when 2, 3, 4
+             "#{number} #{word}ы"
+           else
+             "#{number} #{word}"
+           end
+  when "рубль"
+    return case number % 10
+           when 1
+             "#{number} #{word}"
+           when 2, 3, 4
+             "#{number} #{word}я"
+           else
+             "#{number} #{word}ей"
+           end
+  else
+    return "Неизвестное слово"
   end
 end
-
-if __FILE__ == $0
-  age = Age.new
-  age.age_timer
-end
-
-
-
