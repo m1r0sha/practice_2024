@@ -4,7 +4,7 @@
 #!/usr/bin/env ruby
 
 # email
-email_check = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+email_check = /^[a-zA-Z0-9._]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
 
 # phone number
 phone_number_check = /^\+?[0-9]{11,13}$/
